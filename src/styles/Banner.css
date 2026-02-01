@@ -1,0 +1,50 @@
+/* Banner Styles */
+.banner {
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  font-weight: bold;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+  opacity: 0.95;
+}
+
+.banner-btn {
+  background: white;
+  color: #667eea;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 2rem 1rem;
+  }
+
+  .banner-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
