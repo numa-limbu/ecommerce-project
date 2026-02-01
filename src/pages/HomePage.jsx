@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import { categories, products, promotionalBanners } from '../data/products';
 import '../styles/HomePage.css';
 
-export default function HomePage() {
+export default function HomePage({ onNavigate }) {
   const [activeCategory, setActiveCategory] = useState('All');
   const [cart, setCart] = useState([]);
 
@@ -24,7 +24,7 @@ export default function HomePage() {
 
   return (
     <div className="app">
-      <Header />
+      <Header onNavigate={onNavigate} />
 
       <main className="main-content">
         <div className="container">

@@ -16,6 +16,8 @@ export const products = [
     image: '🎧',
     description: 'High-quality wireless headphones with noise cancellation',
     featured: true,
+    rating: 4.8,
+    reviews: 245,
   },
   {
     id: 2,
@@ -25,6 +27,8 @@ export const products = [
     image: '⌚',
     description: 'Advanced fitness tracking and notifications',
     featured: true,
+    rating: 4.6,
+    reviews: 189,
   },
   {
     id: 3,
@@ -34,6 +38,8 @@ export const products = [
     image: '🔌',
     description: 'Durable and fast charging cable',
     featured: false,
+    rating: 4.3,
+    reviews: 432,
   },
   {
     id: 4,
@@ -43,6 +49,8 @@ export const products = [
     image: '🔋',
     description: '20000mAh capacity with fast charging',
     featured: true,
+    rating: 4.7,
+    reviews: 567,
   },
 
   // Fashion
@@ -54,6 +62,8 @@ export const products = [
     image: '👕',
     description: 'Comfortable 100% cotton t-shirt',
     featured: true,
+    rating: 4.5,
+    reviews: 318,
   },
   {
     id: 6,
@@ -63,6 +73,8 @@ export const products = [
     image: '👖',
     description: 'Classic denim jeans for all occasions',
     featured: false,
+    rating: 4.4,
+    reviews: 276,
   },
   {
     id: 7,
@@ -72,6 +84,8 @@ export const products = [
     image: '👟',
     description: 'Comfortable running sneakers',
     featured: true,
+    rating: 4.9,
+    reviews: 421,
   },
   {
     id: 8,
@@ -81,6 +95,8 @@ export const products = [
     image: '😎',
     description: 'UV protection stylish sunglasses',
     featured: false,
+    rating: 4.2,
+    reviews: 198,
   },
 
   // Home & Garden
@@ -92,6 +108,8 @@ export const products = [
     image: '☕',
     description: 'Programmable coffee maker with timer',
     featured: true,
+    rating: 4.7,
+    reviews: 334,
   },
   {
     id: 10,
@@ -101,6 +119,8 @@ export const products = [
     image: '🌱',
     description: 'Beautiful green plant for home decor',
     featured: false,
+    rating: 4.1,
+    reviews: 89,
   },
   {
     id: 11,
@@ -110,6 +130,8 @@ export const products = [
     image: '💡',
     description: 'LED table lamp with adjustable brightness',
     featured: true,
+    rating: 4.6,
+    reviews: 267,
   },
   {
     id: 12,
@@ -119,6 +141,8 @@ export const products = [
     image: '🛋️',
     description: 'Soft and comfortable throw pillow',
     featured: false,
+    rating: 4.3,
+    reviews: 145,
   },
 
   // Sports
@@ -130,6 +154,8 @@ export const products = [
     image: '🧘',
     description: 'Non-slip yoga mat with carrying strap',
     featured: true,
+    rating: 4.8,
+    reviews: 512,
   },
   {
     id: 14,
@@ -139,6 +165,8 @@ export const products = [
     image: '🏋️',
     description: 'Adjustable dumbbells for home gym',
     featured: false,
+    rating: 4.7,
+    reviews: 289,
   },
   {
     id: 15,
@@ -148,6 +176,8 @@ export const products = [
     image: '🏀',
     description: 'Professional grade basketball',
     featured: true,
+    rating: 4.5,
+    reviews: 203,
   },
   {
     id: 16,
@@ -157,6 +187,8 @@ export const products = [
     image: '🎾',
     description: 'Lightweight carbon fiber tennis racket',
     featured: false,
+    rating: 4.6,
+    reviews: 156,
   },
 
   // Books
@@ -168,6 +200,8 @@ export const products = [
     image: '📖',
     description: 'Complete guide to modern web development',
     featured: true,
+    rating: 4.9,
+    reviews: 678,
   },
   {
     id: 18,
@@ -177,6 +211,8 @@ export const products = [
     image: '📕',
     description: 'Bestselling fiction novel',
     featured: false,
+    rating: 4.4,
+    reviews: 412,
   },
   {
     id: 19,
@@ -186,6 +222,8 @@ export const products = [
     image: '📗',
     description: 'Essential programming concepts and patterns',
     featured: true,
+    rating: 4.8,
+    reviews: 523,
   },
   {
     id: 20,
@@ -195,6 +233,8 @@ export const products = [
     image: '📙',
     description: 'Collection of delicious recipes',
     featured: false,
+    rating: 4.3,
+    reviews: 267,
   },
 ];
 

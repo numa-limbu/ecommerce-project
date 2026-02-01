@@ -1,4 +1,5 @@
 import React from 'react';
+import RatingDisplay from './RatingDisplay';
 import '../styles/ProductCard.css';
 
 export default function ProductCard({ product, onAddToCart }) {
@@ -12,6 +13,11 @@ export default function ProductCard({ product, onAddToCart }) {
       <div className="product-info">
         <h3 className="product-name">{product.name}</h3>
         <p className="product-category">{product.category}</p>
+        
+        {product.rating && (
+          <RatingDisplay rating={product.rating} reviews={product.reviews} />
+        )}
+
         <p className="product-description">{product.description}</p>
 
         <div className="product-footer">
