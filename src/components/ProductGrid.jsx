@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import '../styles/ProductGrid.css';
 
-export default function ProductGrid({ products, onAddToCart }) {
+export default function ProductGrid({ products, onAddToCart, onProductClick }) {
   if (products.length === 0) {
     return (
       <div className="empty-state">
@@ -18,6 +18,7 @@ export default function ProductGrid({ products, onAddToCart }) {
           key={product.id}
           product={product}
           onAddToCart={onAddToCart}
+          onProductClick={onProductClick}
         />
       ))}
     </div>

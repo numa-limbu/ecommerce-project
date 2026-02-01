@@ -22,6 +22,11 @@ export default function HomePage({ onNavigate }) {
     alert(`${product.name} added to cart!`);
   };
 
+  const handleProductClick = (productId) => {
+    onNavigate(`product/${productId}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="app">
       <Header onNavigate={onNavigate} />
@@ -32,7 +37,7 @@ export default function HomePage({ onNavigate }) {
           <BannerCarousel banners={promotionalBanners} />
 
           {/* Featured Products Section */}
-          <FeaturedProducts products={products} onAddToCart={handleAddToCart} />
+          <FeaturedProducts products={products} onAddToCart={handleAddToCart} onProductClick={handleProductClick} />
 
           {/* Category Filter and Products Section */}
           <div className="shop-section">
@@ -52,6 +57,7 @@ export default function HomePage({ onNavigate }) {
               <ProductGrid
                 products={filteredProducts}
                 onAddToCart={handleAddToCart}
+                onProductClick={handleProductClick}
               />
             </section>
           </div>

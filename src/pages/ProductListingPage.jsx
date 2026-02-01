@@ -64,6 +64,11 @@ export default function ProductListingPage({ onNavigate }) {
     alert(`${product.name} added to cart!`);
   };
 
+  const handleProductClick = (productId) => {
+    onNavigate(`product/${productId}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="app">
       <Header onNavigate={onNavigate} />
@@ -142,6 +147,7 @@ export default function ProductListingPage({ onNavigate }) {
                 <ProductGrid
                   products={filteredProducts}
                   onAddToCart={handleAddToCart}
+                  onProductClick={handleProductClick}
                 />
               ) : (
                 <div className="no-products">

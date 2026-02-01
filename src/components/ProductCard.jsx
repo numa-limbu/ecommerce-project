@@ -2,9 +2,12 @@ import React from 'react';
 import RatingDisplay from './RatingDisplay';
 import '../styles/ProductCard.css';
 
-export default function ProductCard({ product, onAddToCart }) {
+export default function ProductCard({ product, onAddToCart, onProductClick }) {
   return (
-    <div className="product-card">
+    <div 
+      className="product-card"
+      onClick={() => onProductClick && onProductClick(product.id)}
+    >
       <div className="product-image">
         <span className="product-icon">{product.image}</span>
         {product.featured && <span className="featured-badge">⭐ Featured</span>}
@@ -24,7 +27,10 @@ export default function ProductCard({ product, onAddToCart }) {
           <span className="product-price">${product.price.toFixed(2)}</span>
           <button
             className="add-to-cart-btn"
-            onClick={() => onAddToCart(product)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onAddToCart(product);
+            }}
           >
             Add to Cart
           </button>

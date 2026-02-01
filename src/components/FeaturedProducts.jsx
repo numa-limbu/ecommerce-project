@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import '../styles/FeaturedProducts.css';
 
-export default function FeaturedProducts({ products, onAddToCart }) {
+export default function FeaturedProducts({ products, onAddToCart, onProductClick }) {
   const featuredProducts = products.filter((p) => p.featured).slice(0, 4);
 
   return (
@@ -18,6 +18,7 @@ export default function FeaturedProducts({ products, onAddToCart }) {
             key={product.id}
             product={product}
             onAddToCart={onAddToCart}
+            onProductClick={onProductClick}
           />
         ))}
       </div>
