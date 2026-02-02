@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import Header from '../components/Header';
 import BannerCarousel from '../components/BannerCarousel';
 import FeaturedProducts from '../components/FeaturedProducts';
@@ -10,7 +11,7 @@ import '../styles/HomePage.css';
 
 export default function HomePage({ onNavigate }) {
   const [activeCategory, setActiveCategory] = useState('All');
-  const [cart, setCart] = useState([]);
+  const { addItem } = useContext(CartContext)
 
   const filteredProducts =
     activeCategory === 'All'
@@ -18,8 +19,7 @@ export default function HomePage({ onNavigate }) {
       : products.filter((p) => p.category === activeCategory);
 
   const handleAddToCart = (product) => {
-    setCart([...cart, product]);
-    alert(`${product.name} added to cart!`);
+    addItem(product, 1)
   };
 
   const handleProductClick = (productId) => {

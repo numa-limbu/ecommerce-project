@@ -41,7 +41,7 @@ button {
   font-family: inherit;
   cursor: pointer;
 }
-}
+
 button:focus,
 button:focus-visible {
   outline: none;

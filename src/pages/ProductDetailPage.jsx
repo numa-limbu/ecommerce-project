@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RatingDisplay from '../components/RatingDisplay';
 import ProductImageGallery from '../components/ProductImageGallery';
 import ProductQuantitySelector from '../components/ProductQuantitySelector';
+import { CartContext } from '../context/CartContext';
 import { products } from '../data/products';
 import '../styles/ProductDetailPage.css';
 
@@ -38,10 +39,12 @@ export default function ProductDetailPage({ productId, onNavigate }) {
     );
   }
 
+  const { addItem } = useContext(CartContext)
+
   const handleAddToCart = () => {
-    setAddedToCart(true);
-    setTimeout(() => setAddedToCart(false), 2000);
-    alert(`${quantity}x ${product.name} added to cart!`);
+    addItem(product, quantity)
+    setAddedToCart(true)
+    setTimeout(() => setAddedToCart(false), 2000)
   };
 
   const relatedProducts = products

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useContext, useEffect } from 'react';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import CategoryFilter from '../components/CategoryFilter';
@@ -6,6 +6,7 @@ import PriceFilter from '../components/PriceFilter';
 import RatingFilter from '../components/RatingFilter';
 import SortingOptions from '../components/SortingOptions';
 import ProductGrid from '../components/ProductGrid';
+import { CartContext } from '../context/CartContext';
 import Footer from '../components/Footer';
 import { categories, products } from '../data/products';
 import '../styles/ProductListingPage.css';
@@ -60,8 +61,16 @@ export default function ProductListingPage({ onNavigate }) {
     return filtered;
   }, [searchTerm, activeCategory, priceRange, selectedRating, sortBy]);
 
+  const { addItem } = useContext(CartContext)
+
+  useEffect(() => {
+    const handler = (e) => setSearchTerm(e.detail || '');
+    window.addEventListener('globalSearch', handler);
+    return () => window.removeEventListener('globalSearch', handler);
+  }, []);
+
   const handleAddToCart = (product) => {
-    alert(`${product.name} added to cart!`);
+    addItem(product, 1)
   };
 
   const handleProductClick = (productId) => {

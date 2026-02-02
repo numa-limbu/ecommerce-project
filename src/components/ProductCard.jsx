@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import RatingDisplay from './RatingDisplay';
+import { AuthContext } from '../context/AuthContext';
 import '../styles/ProductCard.css';
 
 export default function ProductCard({ product, onAddToCart, onProductClick }) {
+  const { user, updateUserWishlist } = useContext(AuthContext)
+  const isWishlisted = user?.wishlist?.includes(product.id)
+
   return (
     <div 
       className="product-card"
@@ -11,6 +15,18 @@ export default function ProductCard({ product, onAddToCart, onProductClick }) {
       <div className="product-image">
         <span className="product-icon">{product.image}</span>
         {product.featured && <span className="featured-badge">⭐ Featured</span>}
+        {user && (
+          <button
+            className={`wishlist-btn ${isWishlisted ? 'wishlisted' : ''}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              updateUserWishlist(product.id);
+            }}
+            title={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
+          >
+            {isWishlisted ? '❤️' : '🤍'}
+          </button>
+        )}
       </div>
 
       <div className="product-info">

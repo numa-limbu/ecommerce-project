@@ -1,8 +1,6 @@
 /* Featured Products Styles */
 .featured-products {
-  padding: 3rem 0;
-  background: white;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
 }
 
 .section-header {
@@ -12,14 +10,14 @@
 
 .section-header h2 {
   font-size: 2rem;
-  color: #333;
   margin: 0 0 0.5rem;
+  color: #333;
 }
 
 .section-header p {
-  color: #666;
-  font-size: 1rem;
+  color: #999;
   margin: 0;
+  font-size: 1rem;
 }
 
 .featured-grid {
@@ -30,7 +28,7 @@
 
 @media (max-width: 768px) {
   .featured-products {
-    padding: 2rem 0;
+    margin-bottom: 2rem;
   }
 
   .section-header h2 {
@@ -38,7 +36,6 @@
   }
 
   .featured-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
   }
 }
